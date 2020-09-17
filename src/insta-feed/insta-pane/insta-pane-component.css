@@ -1,0 +1,26 @@
+:host {
+    display: inline-block;
+    contain: content; /* Boom. CSS containment FTW. */
+    max-width: 260px;
+}
+
+/* Make sure elements don't run outside containers (great for images in columns) */
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+#imageSlot::slotted(*) {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#caption {
+  padding: 10px 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-height: 75px;
+}
+.block {
+  display: block;
+}
